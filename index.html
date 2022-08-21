@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" translate="no">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+    <meta name="description" content="Here you can turn your regular text into demonic, known as Zalgo text">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="keywords" content="demonic text, zalgo text, text generator, демонический текст, генератор демонического текста, текст zalgo, zalgo, залго текст"> 
+    <meta name="Author" content="t2w2o2d2">
+    <meta property="og:title" content="Demonic text generator">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="icon" type="img/png" href="img\pixil-frame-0.png">
+    <title>Demonic text generator</title>
+</head>
+<body>
+    <div id="main_div">
+        <div id="block1">
+            <textarea name="area1" id="text_in" cols="50" rows="10" placeholder="normal text goes here" ></textarea>
+            <div class="border"></div>
+            <img src="img/info.png" alt="img" width="20px" height="20px" id="info">
+            <p id="description">supports only Cyrillic and Latin letters</p>
+        </div>
+        <div id="block2">
+            <div class="options">
+                <h2>Demonic scale</h2>
+                <input type="range" min="1" max="3" step="1">
+                <div id="scales">
+                    <h3>1</h3>
+                    <h3>2</h3>
+                    <h3>3</h3>
+                </div>
+            </div>
+            <div class="options">
+                <div id="check_block">
+                    <input type="checkbox" id="letter_check" name="letter_check">
+                    <p id="check_text">Regular letters</p>
+                </div>
+                <button id="btn">Demonize</button>
+            </div>
+        </div>
+        <div id="block3">
+            <textarea name="area2"  id="text_out" cols="50" rows="10" placeholder="demonic apears here" readonly="readonly"></textarea>
+            <div class="border">
+                <button id="btn_copy">Copy</button>
+                <a id="help_me_pls" href="index1.html">-->Help me pls</a>
+            </div>
+            <img src="img\wing.png" alt="img" width="20px" height="20px" id="wing">
+        </div>
+    </div>
+    <footer>
+        <div class="for_suggestions">
+            <p class="text_me">Any suggestions? then text me--></p>
+            <a href="https://t.me/t2w2o2d2_bot" target="_blank"><img class="tg_logo" src="img\Telegram-logo.png" alt="img" width="58px" height="40px"></a>
+        </div>
+    </footer>
+    <script type="text/javascript">
+        const btn_copy = document.querySelector("#btn_copy")
+
+        function copy(){
+            const copyed = document.querySelector("#text_out").value
+            const wing = document.querySelector("#wing")
+            navigator.clipboard.writeText(copyed)
+
+            if(copyed != ""){
+                wing.style = "animation: opacity_wing 1s"
+                setTimeout(function wing_func(){wing.style = "kastyil 1s"}, 1000)
+            }
+
+        }
+
+        btn_copy.addEventListener("click", copy)
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
